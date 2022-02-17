@@ -1,30 +1,40 @@
+
+//************calculation of Total Expenses**********************/
 document.getElementById('calulate-button').addEventListener('click', function(){
     const foodInput = document.getElementById('food-expenses');
-    const foodAmount = parseInt (foodInput.value);
-    foodInput.value = "";
-
     const rentInput = document.getElementById('rent-expenses');
-    const rentAmount = parseInt (rentInput.value);
-    rentInput.value = '';
-
     const clothInput = document.getElementById('cloth-expenses');
-    const clothAmount = parseInt (clothInput.value);
-    clothInput.value = '';
-    
-    const totalAmount = foodAmount + rentAmount+ clothAmount;
 
+  //*******************total expenses**************** //
+    const totalCost = parseInt (foodInput.value) + parseInt (rentInput.value)+parseInt (clothInput.value) ;
+    
     const totalExpenses= document.getElementById(' total-expenes');
-    totalExpenses.innerText = totalAmount;
+    totalExpenses.innerText = totalCost;
 
     const incomeInput = document.getElementById('total-income');
-   const incomeAmount =  parseInt(incomeInput.value);
+    const incomeAmount =  parseInt(incomeInput.value);
     
-   const totalBalance = document.getElementById('balance-total');
-   totalBalance.innerText = incomeAmount - totalAmount;
+    const totalBalance = document.getElementById('balance-total');
+    totalBalance.innerText = incomeAmount - totalCost;
+
+
+   //clear field
+  //  foodInput.value = '';
+  //  rentInput.value= '';
+  //  clothInput.value = '';
+
+  //.................Calculation of Saving Amount...............// 
+   document.getElementById('saving-btn').addEventListener('click', function(){
+    const savingAmount = incomeAmount * (20/100);
+    const totalSaving = document.getElementById('total-saving');
+    totalSaving.innerText = savingAmount; 
+
+    //.........Remaining Balance After Reducing Saving Amoung.........//
+    const remainingBalance = document.getElementById('remaining-balance');
+    const previousBalance = parseInt(totalBalance.innerText);
+    remainingBalance.innerText = previousBalance - savingAmount;
 })
 
-//saving amount 
-
-document.getElementById('saving-btn').addEventListener('click', function(){
-    const saveAmount =( totalBalance/100)*10
 })
+
+
