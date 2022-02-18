@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Helper</title>
+    <!--********* Boostrap Link*********** -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    
+</head>
+<body>
+    <!--**************Header Title************** -->
+    <header>
+        <h1 class="text-center my-5 text-danger">Budget Helper</h1>
+    </header>
+    <!--**************Mian Content************** -->
+    <main>
+        <div class="container-md">
+            <div class="row mb-5  ">
+                <div class="col-md-6">
+                        <img src="images/calculate money.jpg" class="rounded "  alt="">
+                  
+                </div>
+                <div class="col-md-6 bg-success bg-gradient text-center ">
+                    <div>
+                       <h5 class="fw-bold text-white">Income</h5>
+                       <p class="text-white" > Income <input id="total-income"  type="text" placeholder="Please type Your Income"></p>
+                       <h5  class="fw-bold text-white">Expenses</h5>
+                       <p class="text-white">Food <input id="food-expenses" type="text" placeholder="Type your Food Expenses"></p>
+                       <p class="text-white">Rent <input id="rent-expenses" type="text" placeholder="Type your Rent Expenses"></p>
+                       <p class="text-white">Clothes <input id="cloth-expenses" type="text" placeholder="Type your cloth expenses"></p>
+                       <button id="calulate-button" class="btn btn-primary fw-bold ">Calculate</button>
+                       <h5  class="fw-bold text-white">Total Expenses: <span id=" total-expenes">00</span></h5>
+                       <h5  class="fw-bold text-white">Balance: <span id="balance-total">00</span></h5>
+                       <p class="text-white">Save <button  class="btn btn-secondary bg-gradient px-5 ">20</button> % <button id="saving-btn" class="btn btn-primary px-5 fw-bold ">Save</button></p>
+                       <h5   class="fw-bold text-white">Saving Amount: <span id="total-saving">0</span> </h5>
+                       <h5  class="fw-bold text-white">Remaining Balance: <span id="remaining-balance">0</span></h5>
+                    </div>
+                   
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    
+
+    <!--************* Java script link*********** -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+        <script src="js/money.js"></script>
+</body>
+</html>
